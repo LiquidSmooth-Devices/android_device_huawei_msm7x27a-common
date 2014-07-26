@@ -14,7 +14,7 @@ Change-Id: Id83fc90d771ca3a7179f2c50d0ae828eb3dbaa9f
  res/values/liquid_strings.xml                       |  7 ++++
  res/xml/device_info_memory.xml                  |  5 +++
  src/com/android/settings/deviceinfo/Memory.java | 54 ++++++++++++++++++++++++-
- 4 files changed, 66 insertions(+), 1 deletion(-)
+ 4 files changed, 67 insertions(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
 index 5825e8e..5993e07 100644
