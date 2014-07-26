@@ -11,7 +11,7 @@ to be set in the build.prop.
 Change-Id: Id83fc90d771ca3a7179f2c50d0ae828eb3dbaa9f
 ---
  AndroidManifest.xml                             |  1 +
- res/values/cm_strings.xml                       |  7 ++++
+ res/values/liquid_strings.xml                       |  7 ++++
  res/xml/device_info_memory.xml                  |  5 +++
  src/com/android/settings/deviceinfo/Memory.java | 54 ++++++++++++++++++++++++-
  4 files changed, 66 insertions(+), 1 deletion(-)
