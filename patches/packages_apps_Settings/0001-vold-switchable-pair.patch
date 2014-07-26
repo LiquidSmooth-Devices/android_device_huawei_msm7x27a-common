@@ -39,15 +39,15 @@ index e905f39..2010b2c 100644
 +++ b/res/xml/device_info_memory.xml
 @@ -16,6 +16,11 @@
  
- <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-         android:title="@string/storage_settings_title">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/storage_settings_title">
 +    <CheckBoxPreference
 +        android:key="key_switch_storage"
 +        android:title="@string/storage_switch_title"
 +        android:summaryOn="@string/storage_switch_summary_on"
 +        android:summaryOff="@string/storage_switch_summary_off" />
  
- <!-- Preference categories are dynamically created based on the list of available storage volumes -->
+<!-- Preference categories are dynamically created based on the list of available storage volumes -->
  
 diff --git a/src/com/android/settings/deviceinfo/Memory.java b/src/com/android/settings/deviceinfo/Memory.java
 index 52fef32..5b79865 100644
