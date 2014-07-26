@@ -15,18 +15,6 @@ Change-Id: Id83fc90d771ca3a7179f2c50d0ae828eb3dbaa9f
  src/com/android/settings/deviceinfo/Memory.java | 54 ++++++++++++++++++++++++-
  3 files changed, 66 insertions(+), 1 deletion(-)
 
-diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index 5825e8e..5993e07 100644
---- a/AndroidManifest.xml
-+++ b/AndroidManifest.xml
-@@ -72,6 +72,7 @@
-     <uses-permission android:name="android.permission.CHANGE_PRIVACY_GUARD_STATE" />
-     <uses-permission android:name="android.permission.READ_PHONE_BLACKLIST" />
-     <uses-permission android:name="android.permission.CHANGE_PHONE_BLACKLIST" />
-+    <uses-permission android:name="android.permission.REBOOT" />
- 
-     <permission
-         android:name="android.permission.REQUEST_SUPERUSER"
 diff --git a/res/values/liquid_strings.xml b/res/values/liquid_strings.xml
 index ed81926..6667e5a 100644
 --- a/res/values/liquid_strings.xml
