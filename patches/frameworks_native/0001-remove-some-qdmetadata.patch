@@ -12,14 +12,14 @@ diff --git a/libs/gui/android.mk b/libs/gui/android.mk
 index 8865f32..69d51a4 100644
 --- a/libs/gui/android.mk
 +++ b/libs/gui/android.mk
-@@ -1363,6 +1363,11 @@ public String getDefaultUserAgent(Context context)
+@@  @@ 
          
     LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/vpu/
     LOCAL_CFLAGS += -DQCOM_BSP
 -   LOCAL_SHARED_LIBRARIES += libqdMetaData
 endif         
 
-@@ -1363,6 +1363,11 @@ public String getDefaultUserAgent(Context context)
+@@  @@
 
 diff --git a/libs/gui/Surface.cpp b/libs/gui/Surface.cpp
 index 8865f32..69d51a5 100645
