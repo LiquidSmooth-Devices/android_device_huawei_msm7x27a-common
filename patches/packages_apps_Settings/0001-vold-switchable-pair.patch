@@ -20,8 +20,8 @@ index ed81926..6667e5a 100644
 --- a/res/values/liquid_strings.xml
 +++ b/res/values/liquid_strings.xml
 @@ -700,6 +700,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
-     <string name="adb_notify">USB debugging notify</string>
-     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
+    <string name="unlock_menu_unlock_title">Menu unlock</string>
+    <string name="unlock_menu_unlock_summary">Pressing menu button unlocks device</string>
  
 +    <!-- Vold Switchable Pair -->
 +    <string name="storage_switch_title">Use external SD as primary</string>
@@ -30,9 +30,9 @@ index ed81926..6667e5a 100644
 +    <string name="reboot_prompt_title">Reboot required</string>
 +    <string name="reboot_prompt_message">In order to apply the changed configuration, a reboot is required.\n\nDo you want to reboot now?</string>
 +
-     <!-- Android debugging over WiFi -->
-     <string name="adb_over_network">ADB over network</string>
-     <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi-Fi, USB networks). This setting is reset on reboot</string>
+    <!-- Android debugging over WiFi -->
+    <string name="adb_over_network">ADB over network</string>
+    <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi-Fi, USB networks).
 diff --git a/res/xml/device_info_memory.xml b/res/xml/device_info_memory.xml
 index e905f39..2010b2c 100644
 --- a/res/xml/device_info_memory.xml
