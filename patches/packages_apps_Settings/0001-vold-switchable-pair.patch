@@ -28,7 +28,7 @@ index 5825e8e..5993e07 100644
  
      <permission
          android:name="android.permission.REQUEST_SUPERUSER"
-diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
+diff --git a/res/values/liquid_strings.xml b/res/values/liquid_strings.xml
 index ed81926..6667e5a 100644
 --- a/res/values/liquid_strings.xml
 +++ b/res/values/liquid_strings.xml
