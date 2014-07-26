@@ -30,8 +30,8 @@ index 5825e8e..5993e07 100644
          android:name="android.permission.REQUEST_SUPERUSER"
 diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
 index ed81926..6667e5a 100644
---- a/res/values/cm_strings.xml
-+++ b/res/values/cm_strings.xml
+--- a/res/values/liquid_strings.xml
++++ b/res/values/liquid_strings.xml
 @@ -700,6 +700,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
      <string name="adb_notify">USB debugging notify</string>
      <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
