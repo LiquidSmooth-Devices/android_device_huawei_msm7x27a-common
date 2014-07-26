@@ -1,0 +1,38 @@
+From 567a8f3835c52dcfcdfb4be4e0502bea58a255a3 Mon Sep 17 00:00:00 2001
+From: Daz Jones <yuki@thebronasium.com>
+Date: Wed, 12 Feb 2014 15:54:15 +0100
+Subject: [PATCH] Revert "Remove qdmetadata"
+
+This reverts commit a32cfea37c3892f68807d2df52c9d482e9e1f8f6.
+---
+ libs/gui/android.mk b/libs/gui/android.mk  | 1 -
+ libs/gui/android.mk b/libs/gui/Surface.cpp | 1 -
+ 2 file changed, 2 deletions(-)
+
+diff --git a/libs/gui/android.mk b/libs/gui/android.mk
+index 8865f32..69d51a4 100644
+--- a/libs/gui/android.mk
++++ b/libs/gui/android.mk
+@@ -1363,6 +1363,11 @@ public String getDefaultUserAgent(Context context) {
+         }
+         
+    LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/vpu/
+    LOCAL_CFLAGS += -DQCOM_BSP
+-   LOCAL_SHARED_LIBRARIES += libqdMetaData
+endif         
+
+@@ -1363,6 +1363,11 @@ public String getDefaultUserAgent(Context context) {
+         }
+diff --git a/libs/gui/android.mk b/libs/gui/Surface.cpp
+index 8865f32..69d51a4 100644
+--- a/libs/gui/Surface.cpp
++++ b/libs/gui/Surface.cpp         
+
+#include <gralloc_priv.h>
+-#include <qdMetaData.h>
+#ifdef VFM_AVAILABLE
+#include "vfm_metadata.h"
+
+-- 
+1.8.1.2
+
