@@ -1,7 +1,7 @@
 From c9d65f004e49ab77bd7102787fcfb2abf9db17a8 Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
 Date: Tue, 29 Jul 2014 21:07:02 +0200
-Subject: [PATCH 2/2] Update Surface.cpp
+Subject: [PATCH 2/2] Remove qdMetaData.h
 
 ---
  libs/gui/Surface.cpp |   66 +++++++++++++++++++-------------------------------
