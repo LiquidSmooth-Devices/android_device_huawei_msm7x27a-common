@@ -1,0 +1,23 @@
+From 65a54f5def1758a33fa5cddffb0cd13e178968de Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Wed, 30 Jul 2014 16:45:01 +0200
+Subject: [PATCH 2/2] Remove include <qdMetaData.h>
+
+---
+ libs/gui/Surface.cpp |    1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/libs/gui/Surface.cpp b/libs/gui/Surface.cpp
+index 70e2ac1..96a4c61 100644
+--- a/libs/gui/Surface.cpp
++++ b/libs/gui/Surface.cpp
+@@ -36,7 +36,6 @@
+ 
+ #ifdef QCOM_BSP
+ #include <gralloc_priv.h>
+-#include <qdMetaData.h>
+ #ifdef VFM_AVAILABLE
+ #include "vfm_metadata.h"
+ #endif //VFM_AVAILABLE
+-- 
+1.7.9.5
