@@ -1,0 +1,21 @@
+From 96ee30079d4536ca14c0ce6294edbc568a0e7f2c Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Mon, 4 Aug 2014 16:01:58 +0200
+Subject: [PATCH 4/7] Update HOST_linux-x86.mk
+
+---
+ core/combo/HOST_linux-x86.mk |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/combo/HOST_linux-x86.mk b/core/combo/HOST_linux-x86.mk
+index c6a155a..ae372af 100644
+--- a/core/combo/HOST_linux-x86.mk
++++ b/core/combo/HOST_linux-x86.mk
+@@ -58,4 +58,4 @@ HOST_GLOBAL_CFLAGS += -fPIC \
+ # Disable new longjmp in glibc 2.11 and later. See bug 2967937.
+ HOST_GLOBAL_CFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0
+ 
+-HOST_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
++HOST_NO_UNDEFINED_LDFLAGS := -W
+-- 
+1.7.9.5
