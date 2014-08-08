@@ -1,48 +1,24 @@
-From b13cbf86fc77f70a37e02c9cfd76a203cab3b37a Mon Sep 17 00:00:00 2001
+From fa506f8f94e23aca43d5c2be4983ead8a6f0c210 Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
-Date: Mon, 4 Aug 2014 16:03:45 +0200
-Subject: [PATCH 6/7] Update TARGET_linux-mips.mk
+Date: Mon, 4 Aug 2014 16:02:41 +0200
+Subject: [PATCH 5/7] Update TARGET_linux-arm.mk
 
 ---
- core/combo/TARGET_linux-mips.mk |    2 +-
+ core/combo/TARGET_linux-arm.mk |    2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/core/combo/TARGET_linux-mips.mk b/core/combo/TARGET_linux-mips.mk
-index c908f71..7343fe2 100644
---- a/core/combo/TARGET_linux-mips.mk
-+++ b/core/combo/TARGET_linux-mips.mk
-@@ -66,7 +66,7 @@ else
+diff --git a/core/combo/TARGET_linux-arm.mk b/core/combo/TARGET_linux-arm.mk
+index fb8a9a9..f896e53 100644
+--- a/core/combo/TARGET_linux-arm.mk
++++ b/core/combo/TARGET_linux-arm.mk
+@@ -73,7 +73,7 @@ else
          $(TARGET_OBJCOPY) --add-gnu-debuglink=$< $@
  endif
  
 -TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
 +TARGET_NO_UNDEFINED_LDFLAGS := -W
  
- TARGET_mips_CFLAGS :=	-O2 \
- 			-fomit-frame-pointer \
--- 
-1.7.9.5
-From b13cbf86fc77f70a37e02c9cfd76a203cab3b37a Mon Sep 17 00:00:00 2001
-From: Y300-0100 <bosko.brajovich@gmail.com>
-Date: Mon, 4 Aug 2014 16:03:45 +0200
-Subject: [PATCH 6/7] Update TARGET_linux-mips.mk
-
----
- core/combo/TARGET_linux-mips.mk |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/core/combo/TARGET_linux-mips.mk b/core/combo/TARGET_linux-mips.mk
-index c908f71..7343fe2 100644
---- a/core/combo/TARGET_linux-mips.mk
-+++ b/core/combo/TARGET_linux-mips.mk
-@@ -66,7 +66,7 @@ else
-         $(TARGET_OBJCOPY) --add-gnu-debuglink=$< $@
- endif
- 
--TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
-+TARGET_NO_UNDEFINED_LDFLAGS := -W
- 
- TARGET_mips_CFLAGS :=	-O2 \
- 			-fomit-frame-pointer \
+ TARGET_arm_CFLAGS :=    -O3 \
+                         -fomit-frame-pointer \
 -- 
 1.7.9.5
