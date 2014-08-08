@@ -1,0 +1,24 @@
+From f0508c78152b92fe64e3030996cfc29f975894b0 Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Mon, 4 Aug 2014 16:01:27 +0200
+Subject: [PATCH 3/7] Update HOST_darwin-x86.mk
+
+---
+ core/combo/HOST_darwin-x86.mk |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/combo/HOST_darwin-x86.mk b/core/combo/HOST_darwin-x86.mk
+index fa6f7d3..f0c67f9 100644
+--- a/core/combo/HOST_darwin-x86.mk
++++ b/core/combo/HOST_darwin-x86.mk
+@@ -84,7 +84,7 @@ HOST_GLOBAL_CFLAGS += -isysroot $(mac_sdk_root) -mmacosx-version-min=$(mac_sdk_v
+ HOST_GLOBAL_LDFLAGS += -isysroot $(mac_sdk_root) -Wl,-syslibroot,$(mac_sdk_root) -mmacosx-version-min=$(mac_sdk_version)
+ 
+ HOST_GLOBAL_CFLAGS += -fPIC -funwind-tables
+-HOST_NO_UNDEFINED_LDFLAGS := -Wl,-undefined,error
++HOST_NO_UNDEFINED_LDFLAGS := -W
+ 
+ HOST_SHLIB_SUFFIX := .dylib
+ HOST_JNILIB_SUFFIX := .jnilib
+-- 
+1.7.9.5
