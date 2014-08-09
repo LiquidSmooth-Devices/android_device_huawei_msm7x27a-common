@@ -11,7 +11,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License.
+# limitations under the Licenase.
 #
 
 # WARNING: This line must come *before* including the proprietary
@@ -58,7 +58,7 @@ TARGET_GLOBAL_CPPFLAGS += -mfloat-abi=softfp -mfpu=neon-vfpv4 -mtune=cortex-a5
 
 # Audio
 BOARD_USES_LEGACY_ALSA_AUDIO := true
-TARGET_QCOM_AUDIO_VARIANT := caf
+TARGET_QCOM_AUDIO_VARIANT := legacy
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
