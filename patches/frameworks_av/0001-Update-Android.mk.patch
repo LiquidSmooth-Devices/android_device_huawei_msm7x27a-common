@@ -1,0 +1,48 @@
+From a47f2e6338f6db84d44317d21714c3f86087a714 Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Mon, 11 Aug 2014 18:09:22 +0200
+Subject: [PATCH] Update Android.mk
+
+---
+ media/libstagefright/Android.mk |   12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/media/libstagefright/Android.mk b/media/libstagefright/Android.mk
+index 30e00ca..a7450f7 100644
+--- a/media/libstagefright/Android.mk
++++ b/media/libstagefright/Android.mk
+@@ -120,7 +120,7 @@ ifneq ($(filter caf bfam,$(TARGET_QCOM_AUDIO_VARIANT)),)
+             LOCAL_SRC_FILES += LPAPlayer.cpp
+             LOCAL_CFLAGS += -DLEGACY_LPA -DUSE_LPA_MODE
+         endif
+-        ifeq ($(call is-chipset-in-board-platform,msm7x30),true)
++        ifeq ($(call is-chipset-in-board-platform,msm7x27a),true)
+             LOCAL_SRC_FILES += LPAPlayer.cpp
+             LOCAL_CFLAGS += -DLEGACY_LPA -DUSE_LPA_MODE
+         endif
+@@ -142,7 +142,6 @@ LOCAL_C_INCLUDES += \
+         $(TOP)/hardware/qcom/media/mm-core/inc
+ endif
+ 
+-LOCAL_CFLAGS += -fno-strict-aliasing
+ 
+ LOCAL_SHARED_LIBRARIES := \
+         libbinder \
+@@ -199,6 +198,15 @@ ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS),true)
+ 
+ endif #TARGET_ENABLE_AV_ENHANCEMENTS
+ 
++ifeq ($(TARGET_QCOM_LEGACY_OMX),true)
++    LOCAL_CFLAGS += -DQCOM_LEGACY_OMX
++endif
++
++ifeq ($(TARGET_QCOM_LEGACY_MMPARSER),true)
++    LOCAL_CFLAGS += -DQCOM_LEGACY_MMPARSER
++    LOCAL_SRC_FILES += ExtendedMediaDefs.cpp
++endif
++
+ LOCAL_SRC_FILES += \
+         chromium_http_stub.cpp
+ LOCAL_CPPFLAGS += -DCHROMIUM_AVAILABLE=1
+-- 
+1.7.9.5
