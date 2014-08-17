@@ -1,0 +1,26 @@
+From a1dac1108aca5c861ffd22aae90267c0533db952 Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Sun, 17 Aug 2014 21:49:00 +0200
+Subject: [PATCH 7/7] Update armv7-a.mk
+
+---
+ core/combo/arch/arm/armv7-a.mk |    5 -----
+ 1 file changed, 5 deletions(-)
+
+diff --git a/core/combo/arch/arm/armv7-a.mk b/core/combo/arch/arm/armv7-a.mk
+index 686969a..4a51977 100644
+--- a/core/combo/arch/arm/armv7-a.mk
++++ b/core/combo/arch/arm/armv7-a.mk
+@@ -12,10 +12,5 @@ arch_variant_cflags := \
+     -mfloat-abi=softfp \
+     -mfpu=vfpv3-d16
+ 
+-ifneq (,$(findstring cpu=cortex-a9,$(TARGET_EXTRA_CFLAGS)))
+-arch_variant_ldflags := \
+-	-Wl,--no-fix-cortex-a8
+-else
+ arch_variant_ldflags := \
+ 	-Wl,--fix-cortex-a8
+-endif
+-- 
+1.7.9.5
