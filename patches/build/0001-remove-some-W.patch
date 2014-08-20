@@ -1,7 +1,7 @@
 From fa0205ae5efa8ea6cc3f15eace45ea648faff8b4 Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
 Date: Wed, 20 Aug 2014 18:35:45 +0200
-Subject: [PATCH 1/5] Update HOST_darwin-x86.mk
+Subject: [PATCH 1/6] Update HOST_darwin-x86.mk
 
 ---
  core/combo/HOST_darwin-x86.mk |    2 +-
@@ -27,7 +27,7 @@ index fa6f7d3..9f55137 100644
 From 04388d84b33011254fe0910622a1ff6c7f5412b1 Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
 Date: Wed, 20 Aug 2014 18:36:36 +0200
-Subject: [PATCH 2/5] Update HOST_linux-x86.mk
+Subject: [PATCH 2/6] Update HOST_linux-x86.mk
 
 ---
  core/combo/HOST_linux-x86.mk |    2 +-
@@ -50,7 +50,7 @@ index c6a155a..d2ea1fd 100644
 From 25db63b40f304343e19d6e19d9f98356c4ce68de Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
 Date: Wed, 20 Aug 2014 18:37:25 +0200
-Subject: [PATCH 3/5] Update TARGET_linux-arm.mk
+Subject: [PATCH 3/6] Update TARGET_linux-arm.mk
 
 ---
  core/combo/TARGET_linux-arm.mk |   59 ++++++++--------------------------------
@@ -181,7 +181,7 @@ index b964979..af309f1 100644
 From d0180e23b5f659dd5cb9a555587da94724e27eef Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
 Date: Wed, 20 Aug 2014 18:38:13 +0200
-Subject: [PATCH 4/5] Update TARGET_linux-mips.mk
+Subject: [PATCH 4/6] Update TARGET_linux-mips.mk
 
 ---
  core/combo/TARGET_linux-mips.mk |    2 +-
@@ -207,7 +207,7 @@ index c908f71..6b57768 100644
 From 1283d86ece6e16100f7071d1db8e5ef0ec8ccce5 Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
 Date: Wed, 20 Aug 2014 18:38:58 +0200
-Subject: [PATCH 5/5] Update TARGET_linux-x86.mk
+Subject: [PATCH 5/6] Update TARGET_linux-x86.mk
 
 ---
  core/combo/TARGET_linux-x86.mk |    2 +-
@@ -226,5 +226,46 @@ index 69a8035..866f797 100644
  
  libc_root := bionic/libc
  libm_root := bionic/libm
+-- 
+1.7.9.5
+
+
+From 81210478816275519d35cada1252e3d280e7f4a9 Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Wed, 20 Aug 2014 20:07:19 +0200
+Subject: [PATCH 6/6] Update select.mk
+
+---
+ core/combo/select.mk |   15 ++-------------
+ 1 file changed, 2 insertions(+), 13 deletions(-)
+
+diff --git a/core/combo/select.mk b/core/combo/select.mk
+index 96f44d3..6ef7995 100644
+--- a/core/combo/select.mk
++++ b/core/combo/select.mk
+@@ -46,21 +46,10 @@ $(combo_target)HAVE_STRLCPY := 0
+ $(combo_target)HAVE_STRLCAT := 0
+ $(combo_target)HAVE_KERNEL_MODULES := 0
+ 
+-$(combo_target)GLOBAL_CFLAGS := -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing -fno-exceptions -Wno-multichar -Wno-error=unused-parameter -Wno-error=unused-but-set-variable
+-$(combo_target)RELEASE_CFLAGS := -O3 -g -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing -fno-tree-vectorize -fno-inline-functions -fno-unswitch-loops -fgcse-after-reload -fno-ipa-cp-clone -fno-vect-cost-model -Wno-error=unused-parameter -Wno-error=unused-but-set-variable
+-ifeq ($(OPTIMIZE_LINKER),yes)
+-$(combo_target)GLOBAL_LDFLAGS := -Wl,-O1 -Wl,--as-needed -Wl,--relax -Wl,--sort-common -Wl,--gc-sections
+-else
+-$(combo_target)GLOBAL_LDFLAGS :=
+-endif
++$(combo_target)GLOBAL_CFLAGS := -fno-exceptions -Wno-multichar
++$(combo_target)RELEASE_CFLAGS := -O2 -g -fno-strict-aliasing
+ $(combo_target)GLOBAL_ARFLAGS := crsP
+ 
+-# Turn off strict-aliasing if we're building an AOSP variant without the
+-# patchset...
+-ifeq ($(DEBUG_NO_STRICT_ALIASING),yes)
+-$(combo_target)RELEASE_CFLAGS += -fno-strict-aliasing -Wno-error=strict-aliasing
+-endif
+-
+ $(combo_target)EXECUTABLE_SUFFIX :=
+ $(combo_target)SHLIB_SUFFIX := .so
+ $(combo_target)JNILIB_SUFFIX := $($(combo_target)SHLIB_SUFFIX)
 -- 
 1.7.9.5
