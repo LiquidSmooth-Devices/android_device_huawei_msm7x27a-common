@@ -1,20 +1,20 @@
-From 0000e8fab44adeec8bbc184eda4400d77cecdad6 Mon Sep 17 00:00:00 2001
+From a74ee526f2e754b4de18f5647ee6cb6e271a50a6 Mon Sep 17 00:00:00 2001
 From: Y300-0100 <bosko.brajovich@gmail.com>
-Date: Sat, 2 Aug 2014 20:54:26 +0200
-Subject: [PATCH 2/2] Update liquid_strings.xml
+Date: Sun, 31 Aug 2014 00:39:24 +0200
+Subject: [PATCH] Update liquid_strings.xml
 
 ---
- res/values/liquid_strings.xml |    7 +++++++
+ res/values/liquid_strings.xml | 7 +++++++
  1 file changed, 7 insertions(+)
 
 diff --git a/res/values/liquid_strings.xml b/res/values/liquid_strings.xml
-index 9ce0fbf..298ea93 100644
+index 6129bf9..a6352c8 100644
 --- a/res/values/liquid_strings.xml
 +++ b/res/values/liquid_strings.xml
-@@ -1267,6 +1267,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
-     <!-- Lock screen menu unlock -->
-     <string name="unlock_menu_unlock_title">Menu unlock</string>
-     <string name="unlock_menu_unlock_summary">Pressing menu button unlocks device</string>
+@@ -1270,6 +1270,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
+     <!-- About device screen, CPU and RAM info. -->
+     <string name="cpu_info">CPU</string>
+     <string name="mem_info">Memory</string>
 +    
 +    <!-- Vold Switchable Pair -->
 +    <string name="storage_switch_title">Use external SD as primary</string>
@@ -26,4 +26,4 @@ index 9ce0fbf..298ea93 100644
      <!-- Android debugging over WiFi -->
      <string name="adb_over_network">ADB over network</string>
 -- 
-1.7.9.5
+1.9.1
