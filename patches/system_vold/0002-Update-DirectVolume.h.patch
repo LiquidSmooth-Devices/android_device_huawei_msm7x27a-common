@@ -1,0 +1,26 @@
+From 871818d2c990f65a07b92609b21cb852b7d24b1b Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Tue, 2 Sep 2014 19:02:13 +0200
+Subject: [PATCH 2/2] Update DirectVolume.h
+
+---
+ DirectVolume.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/DirectVolume.h b/DirectVolume.h
+index ab95871..3232a8b 100644
+--- a/DirectVolume.h
++++ b/DirectVolume.h
+@@ -35,8 +35,8 @@ class DirectVolume : public Volume {
+ public:
+     static const int MAX_PARTITIONS = VOLD_MAX_PARTITIONS;
+ protected:
+-    const char* mMountpoint;
+-    const char* mFuseMountpoint;
++    char* mMountpoint;
++    char* mFuseMountpoint;
+ 
+     PathCollection *mPaths;
+     int            mDiskMajor;
+-- 
+1.9.1
