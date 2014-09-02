@@ -139,6 +139,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bt.bdaddr_path=/data/misc/bluedroid/bdaddr \
     ro.qualcomm.bluetooth.dun=true \
     ro.qualcomm.bluetooth.ftp=true
+    
+PRODUCT_PROPERTY_OVERRIDES += \    
+    ro.confg.hw_nfc_cfgversion=110
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true
