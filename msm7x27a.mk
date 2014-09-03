@@ -115,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bluetooth.ftp=true
     
 PRODUCT_PROPERTY_OVERRIDES += \    
-    ro.confg.hw_nfc_cfgversion=110
+    ro.config.hw_nfc_cfgversion=110
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true
