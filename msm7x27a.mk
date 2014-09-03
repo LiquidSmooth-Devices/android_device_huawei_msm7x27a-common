@@ -80,7 +80,6 @@ PRODUCT_COPY_FILES += \
 
 endif # BOARD_HAVE_NFC
 
-
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
     hwmac \
