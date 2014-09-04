@@ -144,6 +144,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
+    persist.sys.vold.switchexternal=1
+    persist.sys.vold.switchablepair=sdcard0,sdcard1
     ro.vold.umsdirtyratio=50
 
 PRODUCT_PROPERTY_OVERRIDES += \
