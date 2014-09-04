@@ -26,7 +26,7 @@ index c7e413d..e1fdcce 100644
  
 -    property_get("persist.sys.vold.switchexternal", switchable, "0");
 -    if (!strcmp(switchable,"1")) {
-+    property_get("persist.sys.vold.switchexternal", switchable, "1");
++    property_get("persist.sys.vold.switchexternal", switchable, "0");
 +    if (!strcmp(switchable,"0")) {
          char *first, *second = NULL;
          const char *delim = ",";
