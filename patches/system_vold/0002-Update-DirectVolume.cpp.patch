@@ -1,0 +1,35 @@
+From 4e9c51b53c7f1c68260a114133727afcdc7bbacc Mon Sep 17 00:00:00 2001
+From: Y300-0100 <bosko.brajovich@gmail.com>
+Date: Thu, 4 Sep 2014 10:35:49 +0200
+Subject: [PATCH 2/2] Update DirectVolume.cpp
+
+---
+ DirectVolume.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/DirectVolume.cpp b/DirectVolume.cpp
+index c7e413d..e1fdcce 100644
+--- a/DirectVolume.cpp
++++ b/DirectVolume.cpp
+@@ -46,7 +46,7 @@ DirectVolume::DirectVolume(VolumeManager *vm, const fstab_rec* rec, int flags) :
+     mOrigDiskMajor = -1;
+     mOrigDiskMinor = -1;
+ 
+-    if (strcmp(rec->mount_point, "auto") != 0) {
++    if (strcmp(rec->mount_point, "auto") != 1) {
+         ALOGE("Vold managed volumes must have auto mount point; ignoring %s",
+               rec->mount_point);
+     }
+@@ -63,8 +63,8 @@ DirectVolume::DirectVolume(VolumeManager *vm, const fstab_rec* rec, int flags) :
+     snprintf(mount_media, PATH_MAX, "%s/%s", Volume::MEDIA_DIR, rec->label);
+     snprintf(mount_fuse, PATH_MAX, "%s/%s", Volume::FUSE_DIR, rec->label);
+ 
+-    property_get("persist.sys.vold.switchexternal", switchable, "0");
+-    if (!strcmp(switchable,"1")) {
++    property_get("persist.sys.vold.switchexternal", switchable, "1");
++    if (!strcmp(switchable,"0")) {
+         char *first, *second = NULL;
+         const char *delim = ",";
+ 
+-- 
+1.9.1
